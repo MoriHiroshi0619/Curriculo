@@ -33,6 +33,7 @@ body {
     background-color: var(--cor1);
     position: relative;
     font-family: var(--fontMain);
+    overflow: hidden;
 }
 
 header {
@@ -67,7 +68,7 @@ ul{
 .header-logo .period{
     width: 15px;
     height: 15px;
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor7));
     position: absolute;
     border-radius: 50%;
     right: -11px;
@@ -85,19 +86,25 @@ ul{
 .header-nav ul li a{
     color: var(--cor0);
     text-decoration: none;
-}
-
-.header-nav ul li{
-    padding: 3px 10px;
-    border-radius: 10px;
     transition: 0.5s;
 }
 
 .header-nav ul li:hover{
-    text-decoration: underline;
-    background-color: var(--cor2);
-    color: black;
+    transform: scale(1.2);
 }
+
+.header-nav ul li a:hover{
+    color: var(--cor4);
+}
+
+.header-nav ul:hover a:not(:hover){
+    opacity: .5;
+}
+
+.header-nav ul li{
+    transition: 0.5s;
+}
+
 
 .header-socials ul{
     display: flex;
@@ -112,11 +119,15 @@ ul{
 
 .header-socials ul img:hover{
     transform: scale(1.4);
-    margin: 7px;
+}
+
+.header-socials ul:hover  img:not(:hover){
+    transform: scale(0.8);
 }
 
 
 section {
+    width: 100vw;
     position: absolute;
     display: flex;
     align-items: center;
@@ -126,44 +137,64 @@ section {
 }
 
 section div {
-    max-width: 40%;
+    max-width: 35%;
+    margin: 0 50px;
 }
+
 
 
 
 .hello-world{
     font-family: var(--fontQuantico);
+    letter-spacing: 2px;
     font-size: 1.2rem;
 }
 
 .div-message h1{
-    font-size: 3rem;
+    font-size: 4vw;
     white-space: nowrap;
 }
 
 .mult-text{
-    background-image: linear-gradient(to right, var(--cor5), var(--cor2));
+    background-image: linear-gradient(to right, var(--cor5), var(--cor3), var(--cor7));
     background-clip: text;
+    font-family: var(--fontQuantico);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.105);
-    
+}
+/* .div-message h1::after{
+    content: '|';
+    color: var(--cor5);
+    opacity: 0;
+    animation: cursor 0.8s linear infinite;
 }
 
+@keyframes cursor{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+ */
 .div-photo {
     background-image: linear-gradient(to bottom, var(--cor5), var(--cor2));
     padding: 20px 20px 10px 20px;
     border-radius: 20%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.501);
-    animation: photo 10s ease-in-out infinite;
+    animation: photo 8s ease-in-out infinite;
 }
 
 @keyframes photo{
     0%, 100% {
         transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.601);
     }
     50%{
         transform: scale(1);
+        box-shadow: 0 0 15px var(--cor6);
     }
 }
 
@@ -171,6 +202,55 @@ section div {
     width: 100%;
     border-radius: 20%;
 }
+
+
+.ball01{
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 20vw;
+    background: linear-gradient(45deg, var(--cor2), var(--cor5), var(--cor7), var(--cor6));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 25%;
+    left: 3%;
+    animation: ball01 8s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+@keyframes ball01 {
+    0%, 100%{
+        transform: translate(0,0);
+        background-position: 0%, 50%;
+    }
+    50%{
+        transform: translate(50%, -30%);
+        background-position: 45%, 50%;
+    }
+}
+
+.ball02{
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 45vw;
+    background: linear-gradient(135deg, var(--cor2), var(--cor5), var(--cor7), var(--cor6));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 45%;
+    left: -15%;
+    animation: ball02 8s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+ @keyframes ball02{
+    0%, 100%{
+        background-position: 0%, 50%;
+        transform: translate(0,0);
+    }
+    50%{
+        background-position: 50%, 50%;
+        transform: translate(20%, 20%);
+    }
+ }
+
+
 
 
 

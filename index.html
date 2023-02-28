@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiroshi Curriculum</title>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <!--<script src="./assets/js/main.js" defer></script>-->
 </head>
 <body>
     <header>
@@ -29,11 +30,14 @@
             </ul>
         </div>
     </header>
+
+    <div class="ball01"></div>
+    <div class="ball02"></div>
     <section>
         <div class="div-message">
             <p class="hello-world">console.log(Hello world);</p>
-            <h1>Eu sou um <span class="mult-text">Desenvolvedor</span></h1>
-            <p class="description">Olá, sou o Mori Hiroshi de 21 anos. atualmente cursando 5º semestre de Sistemas de Informação na Universidade Estadual de Mato Grosso do sul. Seja bem vindo !
+            <h1>Eu sou um <span class="mult-text"></span></h1>
+            <p class="description">Olá, sou o <strong>Mori Hiroshi</strong> de 21 anos. <br> atualmente cursando 5º semestre de Sistemas de Informação na Universidade Estadual de Mato Grosso do sul. Seja bem vindo !
             </p>
         </div>
         <div class="div-photo">
@@ -43,5 +47,17 @@
             </picture>
         </div>
     </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var efeitoEscrever  = new Typed('.mult-text', {
+            strings: ['Desenvolvedor', 'Acadêmico', 'Programador'],
+            loop: true,
+            typeSpeed: 200,
+            backSpeed: 100,
+            backDelay: 80
+        })
+    </script>
 </body>
 </html>
