@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap');
 /*font-family: 'Roboto Flex', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-/*font-family: 'Titillium Web', sans-serif;*/
 
 :root{
     --cor0: rgb(110, 110, 110);
@@ -19,6 +18,7 @@
     --fontMain: 'Titillium Web', sans-serif;
     --fontRoboto: 'Roboto Flex', sans-serif;
     --fontQuantico: 'Quantico', sans-serif;
+
 }
 
 * {
@@ -75,6 +75,8 @@ ul{
     bottom: 0px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .header-nav ul{
     display: flex;
@@ -142,12 +144,10 @@ section div {
 }
 
 
-
-
 .hello-world{
     font-family: var(--fontQuantico);
     letter-spacing: 2px;
-    font-size: 1.2rem;
+    font-size: 1.8vw;
 }
 
 .div-message h1{
@@ -158,11 +158,16 @@ section div {
 .mult-text{
     background-image: linear-gradient(to right, var(--cor5), var(--cor3), var(--cor7));
     background-clip: text;
-    font-family: var(--fontQuantico);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.105);
 }
+.description{
+    font-size: 1.3vw;
+    font-weight: 600;
+    text-shadow: 0 0 1px #f2f2f280;
+}
+
 /* .div-message h1::after{
     content: '|';
     color: var(--cor5);
@@ -180,7 +185,8 @@ section div {
 }
  */
 .div-photo {
-    background-image: linear-gradient(to bottom, var(--cor5), var(--cor2));
+    background: linear-gradient(to bottom, var(--cor5), var(--cor3),var(--cor2));
+    background-size: 200%, 200%;
     padding: 20px 20px 10px 20px;
     border-radius: 20%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.501);
@@ -190,11 +196,13 @@ section div {
 @keyframes photo{
     0%, 100% {
         transform: scale(1.05);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.601);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.601);
+        background-position: 0%, 50%;
     }
     50%{
         transform: scale(1);
-        box-shadow: 0 0 15px var(--cor6);
+        box-shadow: 0 0 10px var(--cor6);
+        background-position: 100%, 50%;
     }
 }
 
@@ -247,6 +255,67 @@ section div {
     50%{
         background-position: 50%, 50%;
         transform: translate(20%, 20%);
+    }
+ }
+
+ .btn-mobile{
+    display: none;
+}
+
+ @media(max-width: 700px){
+    header{
+        justify-content: space-around;
+    }
+    .header-logo span{
+        font-size: 2rem;
+    }
+
+    .header-socials{
+        display: none;
+    }
+    .menu{
+        position: absolute;
+        flex-direction: column;
+        width: 100vw;
+        left: 0;
+        overflow-y: hidden;
+        top: 50px;
+        z-index: 1000;
+        font-size: 1.5rem;
+    }
+    
+    .btn-mobile{
+        font-family: var(--fontRoboto);
+        display: flex;
+        font-weight: 100;
+        font-size: 1.3rem;
+        padding: .5rem 1rem;
+        background: none;
+        border: none;
+        color: var(--cor5);
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    .hamburguer{
+        display: block;
+        border-top: 3px solid var(--cor5);
+        width: 25px;
+
+    }
+
+    .hamburguer::after, .hamburguer::before{
+        content: '';
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-top: 7px;
+        background-color: currentColor;
+        transition: 0.5s;
+        position: relative;
+    }
+    section{
+        flex-direction: column-reverse;
     }
  }
 
