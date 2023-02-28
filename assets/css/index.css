@@ -73,7 +73,6 @@ ul{
     right: -11px;
     bottom: 0px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    
 }
 
 .header-nav ul{
@@ -81,6 +80,23 @@ ul{
     justify-content: center;
     gap: 25px;
     color: var(--cor0);
+}
+
+.header-nav ul li a{
+    color: var(--cor0);
+    text-decoration: none;
+}
+
+.header-nav ul li{
+    padding: 3px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.header-nav ul li:hover{
+    text-decoration: underline;
+    background-color: var(--cor2);
+    color: black;
 }
 
 .header-socials ul{
@@ -91,14 +107,72 @@ ul{
 
 .header-socials ul img{
     width: 30px;
+    transition: 0.5s;
 }
 
-section *{
-    border: 1px solid red;
+.header-socials ul img:hover{
+    transform: scale(1.4);
+    margin: 7px;
 }
+
+
 section {
+    position: absolute;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 50%;
+    transform: translate(0, -50%);
 }
+
+section div {
+    max-width: 40%;
+}
+
+
+
+.hello-world{
+    font-family: var(--fontQuantico);
+    font-size: 1.2rem;
+}
+
+.div-message h1{
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+.mult-text{
+    background-image: linear-gradient(to right, var(--cor5), var(--cor2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.105);
+    
+}
+
+.div-photo {
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor2));
+    padding: 20px 20px 10px 20px;
+    border-radius: 20%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.501);
+    animation: photo 10s ease-in-out infinite;
+}
+
+@keyframes photo{
+    0%, 100% {
+        transform: scale(1.05);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+.div-photo img{
+    width: 100%;
+    border-radius: 20%;
+}
+
+
 
 
 
