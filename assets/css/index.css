@@ -6,3 +6,109 @@
 /*font-family: 'Roboto Flex', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 /*font-family: 'Titillium Web', sans-serif;*/
+
+:root{
+    --cor0: rgb(110, 110, 110);
+    --cor1: #F2F2F2;
+    --cor2: #C4BDF2;
+    --cor3: #7D6BF2;
+    --cor4: #4B1DF2;
+    --cor5: #4218D9; 
+    --cor6: #16F28B;
+    --cor7: #15BF81;
+    --fontMain: 'Titillium Web', sans-serif;
+    --fontRoboto: 'Roboto Flex', sans-serif;
+    --fontQuantico: 'Quantico', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--cor1);
+    position: relative;
+    font-family: var(--fontMain);
+}
+
+header {
+    padding-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul{
+    list-style: none;
+}
+
+.header-logo{
+    position: relative;
+}
+
+.header-logo span{
+    font-family: var(--fontRoboto);
+    font-weight: 1000;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.header-logo .period{
+    width: 15px;
+    height: 15px;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    position: absolute;
+    border-radius: 50%;
+    right: -11px;
+    bottom: 0px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    
+}
+
+.header-nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: var(--cor0);
+}
+
+.header-socials ul{
+    display: flex;
+    gap: 10px;
+    filter: invert(11%) sepia(80%) saturate(7459%) hue-rotate(258deg) brightness(93%) contrast(103%);
+}
+
+.header-socials ul img{
+    width: 30px;
+}
+
+section *{
+    border: 1px solid red;
+}
+section {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
