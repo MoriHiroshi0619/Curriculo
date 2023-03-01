@@ -382,7 +382,7 @@ section div {
         max-width: 60vw;
     }
     .div-message{
-        max-width: 90vw;  
+        max-width: 95vw;  
     }
     .hello-world{
         text-align: center;
@@ -415,7 +415,7 @@ section div {
      }
      .description{
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.2rem;
      }
 
      .ball01{
