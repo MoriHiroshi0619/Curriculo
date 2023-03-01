@@ -8,6 +8,7 @@ function toggleMenu(event){
 
     let nav = document.querySelector('.menu');
     nav.classList.toggle('active');
+    btnMobile.classList.toggle('active');
     
     if(nav.classList.contains('active')){
         document.documentElement.style.overflow = 'hidden';

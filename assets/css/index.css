@@ -262,6 +262,32 @@ section div {
     display: none;
 }
 
+.ball03{
+    display: none;
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 45vw;
+    background: linear-gradient(-135deg, var(--cor6), var(--cor7), var(--cor5), var(--cor2));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 45%;
+    right: -15%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+
+.ball04{
+    display: none;
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 20vw;
+    background: linear-gradient(-100deg, var(--cor6), var(--cor7), var(--cor5), var(--cor2));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 25%;
+    right: 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+
  @media(max-width: 700px){
     header{
         justify-content: space-around;
@@ -287,7 +313,7 @@ section div {
         transition: 1s;
         font-size: 1.5rem;
         background-color: var(--cor1);
-    
+        touch-action: auto;
     }
     .menu.active{
         display: flex;
@@ -323,7 +349,7 @@ section div {
         display: block;
         border-top: 3px solid var(--cor5);
         width: 25px;
-
+        transition: 0.5s;
     }
 
     .hamburguer::after, .hamburguer::before{
@@ -336,17 +362,17 @@ section div {
         transition: 0.5s;
         position: relative;
     }
-    .menu.active .hamburguer{
+    .btn-mobile.active .hamburguer{
         border-top-color: transparent;
     }
-    .menu.active .hamburguer::before{
+    .btn-mobile.active .hamburguer::before{
         transform: rotate(225deg);
     }
-    .menu.active .hamburguer::after{
+    .btn-mobile.active .hamburguer::after{
         top: -10px;
         transform: rotate(-225deg);
     }
-    
+
     section{
         flex-direction: column-reverse;
         gap: 50px;
@@ -397,6 +423,42 @@ section div {
         left: -1.5%;
      }
 
+     .ball03{
+        display: block;
+        top: 80%;
+        width: 55vw;
+        right: 15%;
+        animation: ball03 8s ease-in-out infinite;
+     }
+
+     @keyframes ball03{
+        0%, 100%{
+            background-position: 0%, 50%;
+            transform: translate(0,0);
+        }
+        50%{
+            background-position: 50%, 50%;
+            transform: translate(20%, -40%);
+        }
+     }
+
+    .ball04{
+        display: block;
+        width: 25vw;
+        top: 10%;
+        right: 0%;
+        animation: ball04 8s ease-in-out infinite; 
+    }
+    @keyframes ball04{
+        0%, 100%{
+            background-position: 0%, 50%;
+            transform: translate(0,0);
+        }
+        50%{
+            background-position: 50%, 50%;
+            transform: translate(-20%, 40%);
+        }
+     }
 }
 
 
