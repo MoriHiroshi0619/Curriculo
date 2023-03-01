@@ -147,7 +147,7 @@ section div {
 .hello-world{
     font-family: var(--fontQuantico);
     letter-spacing: 2px;
-    font-size: 1.8vw;
+    font-size: 2vw;
 }
 
 .div-message h1{
@@ -163,7 +163,7 @@ section div {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.105);
 }
 .description{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     font-weight: 600;
     text-shadow: 0 0 1px #f2f2f280;
 }
@@ -274,14 +274,36 @@ section div {
         display: none;
     }
     .menu{
+        display: block;
         position: absolute;
         flex-direction: column;
         width: 100vw;
+        height: 0px;
+        visibility: hidden;
         left: 0;
-        overflow-y: hidden;
+        overflow: hidden;
         top: 50px;
         z-index: 1000;
+        transition: 1s;
         font-size: 1.5rem;
+        background-color: var(--cor1);
+    
+    }
+    .menu.active{
+        display: flex;
+        align-items: center;
+        visibility: visible;
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        touch-action: none;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+    .menu.active li a{
+        color: var(--cor5);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.297);
     }
     
     .btn-mobile{
@@ -314,11 +336,68 @@ section div {
         transition: 0.5s;
         position: relative;
     }
+    .menu.active .hamburguer{
+        border-top-color: transparent;
+    }
+    .menu.active .hamburguer::before{
+        transform: rotate(225deg);
+    }
+    .menu.active .hamburguer::after{
+        top: -10px;
+        transform: rotate(-225deg);
+    }
+    
     section{
         flex-direction: column-reverse;
+        gap: 50px;
     }
- }
 
+    .div-photo{
+        max-width: 60vw;
+    }
+    .div-message{
+        max-width: 90vw;  
+    }
+    .hello-world{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    .div-message h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .mult-text{
+        display: block;
+        font-size: 2.5rem;
+    }
+    .div-message .mult-text::after{
+        content: '|';
+        opacity: 0.9;
+        animation: cursor 1s linear infinite;
+    }
+    
+    @keyframes cursor{
+        0%, 100%{
+            opacity: 0.9;
+        }
+        50%{
+            opacity: 1;
+        }
+    }
+    .typed-cursor{
+        display: none;
+     }
+     .description{
+        text-align: center;
+        font-size: 1rem;
+     }
+
+     .ball01{
+        top: 17%;
+        left: -1.5%;
+     }
+
+}
 
 
 
