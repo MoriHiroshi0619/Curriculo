@@ -288,6 +288,10 @@ section div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
 }
 
+.mobile-link{
+    display: none;
+}
+
  @media(max-width: 700px){
     header{
         justify-content: space-around;
@@ -440,7 +444,7 @@ section div {
             background-position: 50%, 50%;
             transform: translate(20%, -40%);
         }
-     }
+    }
 
     .ball04{
         display: block;
@@ -459,6 +463,10 @@ section div {
             transform: translate(-20%, 40%);
         }
      }
+
+     .mobile-link{
+        display: block;
+    }
 }
 
 
