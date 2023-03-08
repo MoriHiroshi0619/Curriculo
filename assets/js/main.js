@@ -1,12 +1,12 @@
 
-const titulo = document.querySelector('.mult-text');
+const titulo = document.querySelector('.text');
 const texto = titulo.innerHTML.split('');
 function typewriter(titulo){
     titulo.innerHTML = '';
     texto.forEach((letra, i) => {
         setTimeout(() => {
             titulo.innerHTML += letra;
-        },350 * i);
+        },60 * i);
     });
 }
 typewriter(titulo);

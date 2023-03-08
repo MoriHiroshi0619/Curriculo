@@ -28,22 +28,50 @@ h1{
     letter-spacing: 5px;
     font-variant: small-caps;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(45deg, var(--cor5), var(--cor6), var(--cor3), var(--cor7));
+    background-image: linear-gradient(45deg, var(--cor5), var(--cor6), var(--cor3), var(--cor7), var(--cor3), var(--cor6), var(--cor5), var(--cor7));
+    background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin: 80px 30px;
+    animation: title 7s ease-in-out infinite;
+    
 }
 
+@keyframes title {
+    0%, 100%{
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+
 p{
-    text-align: center;
+    text-align: left;
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
+    text-indent: 25px;
     font-size: 1.1rem;
 }
 
+p::after{
+    content: "|";
+    font-size: 1.2rem;
+    animation: typeText .9s linear infinite;
+}
+
+@keyframes typeText {
+    0%, 100%{
+        opacity: 1;;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 
 
 
