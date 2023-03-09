@@ -22,6 +22,7 @@
 }
 
 h1{
+    position: relative;
     font-family: var(--fontRoboto);
     font-weight: 1000;
     font-size: 2.5rem;
@@ -50,6 +51,7 @@ h1{
 
 
 p{
+    position: relative;
     text-align: left;
     max-width: 500px;
     margin: 0 auto;
@@ -74,6 +76,76 @@ p::after{
 }
 
 
+.ball01{
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 15vw;
+    background: linear-gradient(45deg, var(--cor2), var(--cor5), var(--cor7), var(--cor6));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 30%;
+    left: 3%;
+    animation: ball01 8s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+@keyframes ball01 {
+    0%, 100%{
+        transform: translate(0,0);
+        background-position: 0%, 50%;
+    }
+    50%{
+        transform: translate(50%, -30%);
+        background-position: 45%, 50%;
+    }
+}
+
+.ball02{
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 35vw;
+    background: linear-gradient(135deg, var(--cor2), var(--cor5), var(--cor7), var(--cor6));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 45%;
+    left: -15%;
+    animation: ball02 8s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+}
+ @keyframes ball02{
+    0%, 100%{
+        background-position: 0%, 50%;
+        transform: translate(0,0);
+    }
+    50%{
+        background-position: 50%, 50%;
+        transform: translate(20%, 20%);
+    }
+ }
+
+ .ball03{
+    
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 25vw;
+    background: linear-gradient(-135deg, var(--cor6), var(--cor7), var(--cor5), var(--cor2));
+    background-size: 200%, 200%;
+    border-radius: 50%;
+    top: 55%;
+    right: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.332);
+    animation: ball03 8s ease-in-out infinite;
+}
+
+@keyframes ball03{
+    0%, 100%{
+        background-position: 0%, 50%;
+        transform: translate(0,0);
+    }
+    50%{
+        background-position: 50%, 50%;
+        transform: translate(20%, -40%);
+    }
+}
 
 
 
