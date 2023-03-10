@@ -30,22 +30,23 @@ body{
 }
 
 .container-skill {   
-    max-width: 700px;
-    
-    margin: 30px auto;
+    width: 100vw;
+    height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
 .list-skill{
+    max-width: 800px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px 100px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .skill{
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +69,28 @@ body{
     font-weight: 600;
 }
 
+.skill-level{
+    display: flex;
+    gap: 5px;
+}
+
 .level-1{
+    width: 15px;
+    height: 15px;
+}
+.level-2{
+    width: 15px;
+    height: 15px;
+}
+.level-3{
+    width: 15px;
+    height: 15px;
+}
+.level-4{
+    width: 15px;
+    height: 15px;
+}
+.level-5{
     width: 15px;
     height: 15px;
 }
