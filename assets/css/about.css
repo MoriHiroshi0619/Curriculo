@@ -57,7 +57,8 @@ p{
     margin: 0 auto;
     padding: 20px;
     text-indent: 25px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 p::after{

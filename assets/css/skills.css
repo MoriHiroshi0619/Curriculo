@@ -31,6 +31,7 @@ body{
 
 .container-skill {   
     max-width: 700px;
+    
     margin: 30px auto;
     display: flex;
     justify-content: center;
@@ -49,13 +50,13 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 0 30px;
+    margin: 20px 30px;
 }
 
 
 .skill-icon{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .skill-icon img{
@@ -63,11 +64,14 @@ body{
 }
 
 .skill span{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-
+.level-1{
+    width: 15px;
+    height: 15px;
+}
 
 
 
