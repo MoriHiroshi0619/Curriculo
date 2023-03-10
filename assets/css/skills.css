@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*font-family: 'Quantico', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap');
+/*font-family: 'Roboto Flex', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root{
+    --cor0: rgb(110, 110, 110);
+    --cor1: #F2F2F2;
+    --cor2: #C4BDF2;
+    --cor3: #7D6BF2;
+    --cor4: #4B1DF2;
+    --cor5: #4218D9; 
+    --cor6: #16F28B;
+    --cor7: #15BF81;
+    --fontMain: 'Titillium Web', sans-serif;
+    --fontRoboto: 'Roboto Flex', sans-serif;
+    --fontQuantico: 'Quantico', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-skill *{
+    border: 1px solid red; 
+}
+
+.container-skill {   
+    max-width: 700px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-skill{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 100px;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 30px;
+}
+
+
+.skill-icon{
+    width: 70px;
+    height: 70px;
+}
+
+.skill-icon img{
+    width: 100%;
+}
+
+.skill span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
