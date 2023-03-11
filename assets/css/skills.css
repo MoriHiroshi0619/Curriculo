@@ -26,15 +26,13 @@ body{
 }
 
 .container-skill *{
-    border: 1px solid red; 
+    /* border: 1px solid red;   */
 }
 
 .container-skill {   
     width: 100vw;
-    height: 90vh;
     display: flex;
     justify-content: center;
-    
 }
 
 .list-skill{
@@ -49,7 +47,8 @@ body{
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex: 1 0 200px;
     gap: 10px;
     margin: 0 30px;
 }
@@ -62,11 +61,13 @@ body{
 
 .skill-icon img{
     width: 100%;
+    animation: appear .8s ease-in;
 }
 
 .skill span{
     font-size: 1rem;
     font-weight: 600;
+    animation: appear .8s ease-in;
 }
 
 .skill-level{
@@ -77,23 +78,71 @@ body{
 .level-1{
     width: 15px;
     height: 15px;
-}
+    border-radius: 10%;
+    background-color: var(--cor2);
+    animation: appearLV 2s ease-in;
+/*     animation-delay: 1s;
+ */}
 .level-2{
     width: 15px;
     height: 15px;
+    border-radius: 10%;
+    background-color: var(--cor3);
+    animation: appearLV 3s ease-in;
+  /*   animation-delay: 2s; */
 }
 .level-3{
     width: 15px;
     height: 15px;
+    border-radius: 10%;
+    background-color: var(--cor4);
+    animation: appearLV 4s ease-in;
+    /* animation-delay: 3s; */
 }
 .level-4{
     width: 15px;
     height: 15px;
+    border-radius: 10%;
+    background-color: var(--cor5);
+    animation: appearLV 5s ease-in;
+    /* animation-delay: 4s; */
 }
 .level-5{
     width: 15px;
     height: 15px;
+    border-radius: 10%;
+    background-color: var(--cor6);
+    animation: appearLV 6s ease-in;
+    /* animation-delay: 5s; */
 }
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes appearLV {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    95%{
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 
 
