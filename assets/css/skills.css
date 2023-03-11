@@ -26,7 +26,7 @@ body{
 }
 
 .container-skill *{
-    /* border: 1px solid red;   */
+    /* border: 1px solid red;    */
 }
 
 .container-skill {   
@@ -73,47 +73,35 @@ body{
 .skill-level{
     display: flex;
     gap: 5px;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.level-box{
+    width: 15px;
+    height: 15px;
+    border-radius: 10%;
 }
 
 .level-1{
-    width: 15px;
-    height: 15px;
-    border-radius: 10%;
     background-color: var(--cor2);
     animation: appearLV 2s ease-in;
-/*     animation-delay: 1s;
- */}
+}
 .level-2{
-    width: 15px;
-    height: 15px;
-    border-radius: 10%;
     background-color: var(--cor3);
     animation: appearLV 3s ease-in;
-  /*   animation-delay: 2s; */
 }
 .level-3{
-    width: 15px;
-    height: 15px;
-    border-radius: 10%;
     background-color: var(--cor4);
     animation: appearLV 4s ease-in;
-    /* animation-delay: 3s; */
 }
 .level-4{
-    width: 15px;
-    height: 15px;
-    border-radius: 10%;
     background-color: var(--cor5);
     animation: appearLV 5s ease-in;
-    /* animation-delay: 4s; */
 }
 .level-5{
-    width: 15px;
-    height: 15px;
-    border-radius: 10%;
     background-color: var(--cor6);
     animation: appearLV 6s ease-in;
-    /* animation-delay: 5s; */
 }
 
 
