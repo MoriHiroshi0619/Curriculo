@@ -1,6 +1,5 @@
 let btnMobile = document.querySelector('.btn-mobile');
 
-
 function toggleMenu(event){
     if(event.type === 'touchstart'){
         event.preventDefault();
@@ -18,7 +17,6 @@ function toggleMenu(event){
         document.body.scroll = "yes"; 
     }
 }
-
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);

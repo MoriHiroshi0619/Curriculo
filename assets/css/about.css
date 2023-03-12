@@ -58,6 +58,7 @@ p{
     padding: 20px;
     font-size: 1.3rem;
     font-weight: bold;
+    text-shadow: 0 0 1px #f2f2f280;
 }
 
 p::after{
@@ -147,6 +148,21 @@ p::after{
     }
 }
 
+@media (max-width: 480px){
+    .ball01{
+        width: 30vw;
+        top: 37%;
+    }
+    .ball02{
+        width: 50vw;
+        left: -20%;
+    }
+    .ball03{
+        width: 40vw;
+        top: 70%;
+        right: 10%;
+    }
+}
 
 
 
