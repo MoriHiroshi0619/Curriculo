@@ -52,11 +52,10 @@ h1{
 
 p{
     position: relative;
-    text-align: left;
+    text-align: center;
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    text-indent: 25px;
     font-size: 1.3rem;
     font-weight: bold;
 }
