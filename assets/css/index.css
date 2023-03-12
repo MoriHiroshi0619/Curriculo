@@ -27,9 +27,6 @@
     box-sizing: border-box;
 }
 
-body{
-    overflow: hidden;
-}
 
 section {
     width: 100vw;
