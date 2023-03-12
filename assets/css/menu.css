@@ -155,7 +155,7 @@ ul{
         left: 0;
         overflow: hidden;
         top: 50px;
-        z-index: 1000;
+        z-index: 10000;
         transition: 1s;
         font-size: 1.5rem;
         background-color: var(--cor1);
