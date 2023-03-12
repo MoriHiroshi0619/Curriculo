@@ -83,6 +83,7 @@ body{
     border-radius: 10%;
 }
 
+
 .level-1{
     background-color: var(--cor2);
     animation: appearLV 2s ease-in;
