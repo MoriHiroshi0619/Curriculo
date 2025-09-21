@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Curriculum</title>
     <link rel="shortcut icon" href="../icon/hiroshi.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/skills.css">
+
     <script src="../js/menu.js" defer></script>
 </head>
 <body>
@@ -38,36 +42,198 @@
     </div>
 </header>
 
-<div class="container-skill">
-    <ul class="list-skill" id="skills-list" role="list"></ul>
+<main>
+    <section class="container-skill" aria-labelledby="skills-title">
+        <h1 id="skills-title" class="visually-hidden">Skills</h1>
+        <ul class="list-skill" id="skills-list" role="list"></ul>
+    </section>
+</main>
+
+<div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="skillModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body" id="skillModalDesc"></div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     const skills = [
-        { imgPath: '../icon/html-5.png', skill: 'HTML', level: 5 },
-        { imgPath: '../icon/css-3.png', skill: 'CSS', level: 5 },
-        { imgPath: '../icon/bootstrap.png', skill: 'BootStrap', level: 4 },
-        { imgPath: '../icon/sass.png', skill: 'Sass', level: 5 },
-        { imgPath: '../icon/js.png', skill: 'Javascript', level: 4 },
-        { imgPath: '../icon/php.png', skill: 'PHP', level: 5 },
-        { imgPath: '../icon/laravel.png', skill: 'Laravel', level: 3 },
-        { imgPath: '../icon/java.png', skill: 'Java', level: 4 },
-        { imgPath: '../icon/spring.png', skill: 'Spring', level: 2 },
-        { imgPath: '../icon/letra-c.png', skill: 'C', level: 5 },
-        { imgPath: '../icon/python.png', skill: 'Python', level: 3 },
-        { imgPath: '../icon/servidor-sql.png', skill: 'SQL', level: 5 }
+        {
+            imgPath: '../icon/html-5.png',
+            skill: 'HTML',
+            level: 5,
+            desc: 'Marcação semântica, acessibilidade e estruturas responsivas.'
+        },
+        {
+            imgPath: '../icon/css-3.png',
+            skill: 'CSS',
+            level: 5,
+            desc: 'Layouts com grid e flexbox, variáveis e responsividade.'
+        },
+        {
+            imgPath: '../icon/Bootstrap.png',
+            skill: 'BootStrap',
+            level: 5,
+            desc: 'Grid e componentes para prototipação rápida.'
+        },
+        {
+            imgPath: '../icon/sass.png',
+            skill: 'Sass',
+            level: 5,
+            desc: 'Pré-processador para organização de estilos com variáveis e mixins.'
+        },
+        {
+            imgPath: '../icon/tailwind.png',
+            skill: 'Tailwind',
+            level: 5,
+            desc: 'Utility-first; configuração via tailwind.config e uso do modo JIT.'
+        },
+        {
+            imgPath: '../icon/git.png',
+            skill: 'git',
+            level: 5,
+            desc: 'Fluxos com branches, pull requests, rebase/merge e resolução de conflitos.'
+        },
+        {
+            imgPath: '../icon/bash.png',
+            skill: 'bash',
+            level: 5,
+            desc: 'Automação com scripts, pipes, sed/awk e cron jobs.'
+        },
+        {
+            imgPath: '../icon/js.png',
+            skill: 'Javascript',
+            level: 5,
+            desc: 'ES6+, DOM, fetch/async e modularização.'
+        },
+        {
+            imgPath: '../icon/jQuery.png',
+            skill: 'Jquery',
+            level: 5,
+            desc: 'Uso em projetos legados para manipulação do DOM e AJAX.'
+        },
+        {
+            imgPath: '../icon/vue.js.png',
+            skill: 'Vue js',
+            level: 5,
+            desc: 'Desenvolvimento de interfaces SPA com Vue 3 integrado via Inertia (Options API). Criação de components SFC reutilizáveis, passagem de props, eventos customizados, ciclo de vida, transições e gerenciamento local de estado; experiência prática em telas de produção conectadas a back-end Laravel.'
+        },
+        {
+            imgPath: '../icon/Postman.png',
+            skill: 'Postman',
+            level: 5,
+            desc: 'Testes de API com collections e ambientes.'
+        },
+        {
+            imgPath: '../icon/php.png',
+            skill: 'PHP',
+            level: 5,
+            desc: 'PHP moderno, composer e integração com bancos de dados.'
+        },
+        {
+            imgPath: '../icon/laravel.png',
+            skill: 'Laravel',
+            level: 5,
+            desc: 'Principal ferramenta em ambiente profissional. Uso avançado de routing, controllers, policies/gates e middleware; Eloquent ORM (relações complexas, scopes, eager loading); migrations, factories e seeders; jobs/queues e integração com Redis/Horizon; testes (unit/feature), Service Container/Providers, otimização de queries, segurança e pipelines de CI/CD.'
+        },
+        {
+            imgPath: '../icon/postgres.png',
+            skill: 'Postgres',
+            level: 5,
+            desc: 'Modelagem relacional, índices e otimização de queries.'
+        },
+        {
+            imgPath: '../icon/Redis.png',
+            skill: 'Redis',
+            level: 4,
+            desc: 'Cache, session store e patterns pub/sub; uso integrado com Laravel para melhorar performance.'
+        },
+        {
+            imgPath: '../icon/docker.png',
+            skill: 'Docker',
+            level: 4,
+            desc: 'Containers, docker-compose e multi-stage builds para ambientes reproduzíveis.'
+        },
+        {
+            imgPath: '../icon/java.png',
+            skill: 'Java',
+            level: 4,
+            desc: 'OOP, collections e desenvolvimento de APIs.'
+        },
+        {
+            imgPath: '../icon/spring.png',
+            skill: 'Spring',
+            level: 4,
+            desc: 'Experiência aplicada principalmente no TCC (bot para Reddit): uso de Spring Boot para estruturar o projeto, injeção de dependências, configuração de beans, agendamento de tarefas (@Scheduled), consumo de APIs com WebClient, Spring Data para persistência e testes de integração; empacotamento e deploy.'
+        },
+        {
+            imgPath: '../icon/C.png',
+            skill: 'C',
+            level: 4,
+            desc: 'Programação de baixo nível: ponteiros, gerenciamento de memória e algoritmos.'
+        },
+        {
+            imgPath: '../icon/python.png',
+            skill: 'Python',
+            level: 4,
+            desc: 'Scripts, automação e pequenas APIs.'
+        },
+        {
+            imgPath: '../icon/Flask.png',
+            skill: 'Flask',
+            level: 4,
+            desc: 'Desenvolvimento de API consumida pela aplicação principal em Laravel: organização em blueprints, endpoints REST, validação/serialização, CORS e autenticação via tokens; deploy WSGI (gunicorn) ou containerizado para integração simples entre serviços.'
+        },
+        {
+            imgPath: '../icon/linux.png',
+            skill: 'Linux',
+            level: 4,
+            desc: 'Sistema usado no dia a dia no trabalho (Ubuntu): uso do shell, gestão de pacotes, systemd, logs (journalctl), SSH, permissões, deploys e práticas básicas de segurança/hardening.'
+        },
+        {
+            imgPath: '../icon/Django.png',
+            skill: 'Django',
+            level: 3,
+            desc: 'Conhecimento introdutório via minicurso: models, admin, ORM, views e templates; capaz de construir aplicações simples e APIs.'
+        },
+        {
+            imgPath: '../icon/Unity.png',
+            skill: 'Unity',
+            level: 2,
+            desc: 'Uso por ~1 ano em projeto acadêmico 2D: criação de cenas, sprites, animações, scripts em C#, tilemaps, física 2D e pipeline básico de build.'
+        }
     ];
 
     const MAX_LEVEL = 5;
     const skillsList = document.getElementById('skills-list');
+    const modalEl = document.getElementById('skillModal');
+    const modalTitle = document.getElementById('skillModalLabel');
+    const modalDesc = document.getElementById('skillModalDesc');
+    const bsModal = new bootstrap.Modal(modalEl);
 
     function renderSkills(items) {
         const frag = document.createDocumentFragment();
 
-        items.forEach(item => {
+        items.forEach((item, idx) => {
             const li = document.createElement('li');
-            li.className = 'skill';
+            li.className = 'skill-item';
             li.setAttribute('role', 'listitem');
+
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'skill-card';
+            btn.setAttribute('aria-haspopup', 'dialog');
+            btn.setAttribute('data-index', idx);
 
             const iconWrap = document.createElement('div');
             iconWrap.className = 'skill-icon';
@@ -89,7 +255,7 @@
                 box.className = 'level-box level-' + i;
                 if (i <= item.level) {
                     box.classList.add('active');
-                    const delayMs = (i - 1) * 180;
+                    const delayMs = (i - 1) * 150;
                     box.style.setProperty('--delay', `${delayMs}ms`);
                 } else {
                     box.classList.add('inactive');
@@ -97,10 +263,17 @@
                 levelWrap.appendChild(box);
             }
 
-            li.appendChild(iconWrap);
-            li.appendChild(name);
-            li.appendChild(levelWrap);
+            btn.appendChild(iconWrap);
+            btn.appendChild(name);
+            btn.appendChild(levelWrap);
+            li.appendChild(btn);
             frag.appendChild(li);
+
+            btn.addEventListener('click', () => {
+                modalTitle.textContent = item.skill;
+                modalDesc.innerHTML = `<p style="margin:0 0 .25rem 0; line-height:1.4;">${item.desc}</p>`;
+                bsModal.show();
+            });
         });
 
         skillsList.appendChild(frag);
