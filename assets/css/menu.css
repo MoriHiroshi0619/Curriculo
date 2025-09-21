@@ -145,20 +145,23 @@ ul{
     .header-socials{
         display: none;
     }
+
     .menu{
         display: block;
         position: absolute;
         flex-direction: column;
         width: 100vw;
-        height: 0px;
+        margin-top: 5px;
+        height: 0;
         visibility: hidden;
         left: 0;
         overflow: hidden;
         top: 50px;
         z-index: 10000;
-        transition: 1s;
+        transition: height 350ms ease, visibility 0.2s;
         font-size: 1.5rem;
-        background-color: var(--cor1);
+        background-color: #ffffff;
+        -webkit-overflow-scrolling: touch;
     }
     .menu.active{
         display: flex;
@@ -166,7 +169,7 @@ ul{
         visibility: visible;
         height: calc(100vh - 50px);
         overflow-y: auto;
-        touch-action: none;
+        touch-action: auto;
     }
 
     .menu li {
@@ -176,45 +179,70 @@ ul{
         color: var(--cor5);
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.297);
     }
-    
+
     .btn-mobile{
         font-family: var(--fontRoboto);
         display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 100;
         font-size: 1.3rem;
-        padding: .5rem 1rem;
+        padding: .6rem 1rem;
         background: none;
         border: none;
         color: var(--cor5);
         cursor: pointer;
-        gap: .5rem;
+        gap: .6rem;
+        z-index: 10001;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .hamburguer{
         display: block;
-        border-top: 3px solid var(--cor5);
-        width: 25px;
-        transition: 0.5s;
-    }
-
-    .hamburguer::after, .hamburguer::before{
-        content: '';
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin-top: 7px;
-        background-color: currentColor;
-        transition: 0.5s;
+        width: 26px;
+        height: 18px;
         position: relative;
     }
+
+    .hamburguer,
+    .hamburguer::before,
+    .hamburguer::after{
+        background-color: currentColor;
+        height: 3px;
+        border-radius: 2px;
+        transition: transform .35s ease, top .35s ease, opacity .25s ease;
+    }
+
+    .hamburguer{
+    }
+
+    .hamburguer::before,
+    .hamburguer::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .hamburguer::before{
+        top: -7px;
+    }
+    .hamburguer::after{
+        top: 7px;
+    }
+
     .btn-mobile.active .hamburguer{
-        border-top-color: transparent;
+        background: transparent;
+    }
+
+    .btn-mobile.active .hamburguer{
+        opacity: 1;
     }
     .btn-mobile.active .hamburguer::before{
+        top: 0;
         transform: rotate(225deg);
     }
     .btn-mobile.active .hamburguer::after{
-        top: -10px;
+        top: 0;
         transform: rotate(-225deg);
     }
 
